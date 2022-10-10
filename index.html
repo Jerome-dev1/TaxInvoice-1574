@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td, td {
+  font-size: 15px;
+  border: 0.5px solid black;
+  text-align: center;
+  align-items: center; 
+  margin-top: 30px
+}
+
+.image-section {
+  margin-bottom: 25px;
+}
+
+.tax-invoice {
+  font-size: 20px;
+}
+
+
+body {
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  background-color: aliceblue;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.main-container {
+  position: relative;
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgb(255, 255, 255);
+  padding: 60px;
+  padding-bottom: 300px;
+}
+
+.header-container {
+  font-size: 15px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.footer-container {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 350px;
+  width: 100%;
+}
+
+.end-section {
+  font-size: 15px;
+}
+
+
+</style>
+  <body>
+    <div class="main-container">
+      <h1 class="header-container">
+        <div class="header-section"> 
+          <img class="image-section" src="./assets/company_logo.jpg">
+          <div class="bill-client">
+            <p>BILL TO</p>
+            <p>[Client Business Name]</p>
+            <p>[Client Business Address]</p>
+            <p>TRN: [Tax Registration Number]</p>
+          </div>
+        </div>          
+          <div class="right-section">               
+            <div class="tax-invoice">
+              <p>Tax Invoice# 1547</p>
+            </div>   
+            <div class="header-date">
+              <p>Invoice Date: Oct/07/2022</p>
+              <p>Due Date: Oct/22/2022</p>
+            </div>
+            <div class="bill-section">
+              <div class="bill-text">
+                <p>[Your Company Name]</p>
+                <p>[Address]</p>
+                <p>TRN: [Tax Registration Number</p>
+              </div>
+          </div>          
+        </div>
+      </h1>
+        <table style="width: 100%"> 
+          <tr>
+            <th>DESCRIPTION</th>
+            <th>QTY</th>
+            <th>UNIT PRICE</th>
+            <th>SUBTOTAL</th>
+            <th>VAT</th>            
+          </tr>         
+          <tr>
+            <td>Products</td>
+            <td>3</td>
+            <td>1,2333.00</td>
+            <td>3,699.00</td>
+            <td>184.95(5%)</td>
+          </tr>
+          <tr>
+            <td>services</td>
+            <td>1</td>
+            <td>2,027.00</td>
+            <td>2,027.00</td>
+            <td>101.35(5%)</td>
+          </tr>
+        </table>
+        <h2 class="footer-container">
+          <div class="footer-class">
+            <div class="footer">
+              <p>SIX THOUSAND TWELVE AED AND 30 FILS</p>
+              <div class="footer-section">
+                <p>SUBTOTAL</p>
+                <p>VAT</p>
+                <p>Total</p>
+              </div>
+              <div class="footer-text">
+                <p>AED 5,726.00</p>
+                <p>AED 286.30</p>
+                <p>AED 6,012.30</p>
+              </div>
+            </div>
+          </div>
+        </h2>
+        <div class="end-section">
+          <p>[Bank Name]</p>
+          <p>SWIFT: [SWIFT]</p>
+          <p>Bank account number: [Bank account number]</p>
+        </div>
+     </div>
+  </body>
+</html>
+
