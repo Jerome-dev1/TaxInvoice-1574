@@ -1,58 +1,93 @@
 <!DOCTYPE html>
 <html>
 <style>
-table, th, td, td {
+.content-table {
   font-size: 15px;
-  border: 0.5px solid black;
+  border-collapse: collapse;
+  min-width: 300px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.content-table thead tr {
+  background-color: #009879;
   text-align: center;
-  align-items: center; 
-  margin-top: 30px
+  font-weight: bold;
+}
+
+.content-table th, td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px #dddddd;
+  text-align: center;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f2f2f2;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879
 }
 
 .image-section {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .tax-invoice {
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
 body {
-  height: 1000px;
+  
   display: flex;
   justify-content: center;
-  background-color: aliceblue;
+  background-color: #a8a8a8;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
 .main-container {
+  font-size: 8px;
+  font-style: normal;
   position: relative;
   width: 700px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   background-color: rgb(255, 255, 255);
-  padding: 60px;
-  padding-bottom: 300px;
+  padding: 50px;
+  padding-bottom: 325px;
 }
 
 .header-container {
-  font-size: 15px;
+  font-size: 14px;
+  font-style: normal;
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
+  padding-bottom: 35px;
 }
 
+
 .footer-container {
-  font-size: 15px;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 70px;
 }
 
 .footer {
+  font-style: italic;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -60,10 +95,22 @@ body {
   width: 100%;
 }
 
-.end-section {
-  font-size: 15px;
+.footer-section {
+  font-size: 14px;
+  font-style: normal;
 }
 
+.footer-text {
+  font-size: 14px;
+  font-style: normal;
+}
+
+.end-section {
+  font-size: 14px;
+  position: relative;
+  border-top: 1px solid rgb(99, 99, 99);
+  width: 100%
+} 
 
 </style>
   <body>
@@ -72,6 +119,7 @@ body {
         <div class="header-section"> 
           <img class="image-section" src="./assets/company_logo.jpg">
           <div class="bill-client">
+            <br>
             <p>BILL TO</p>
             <p>[Client Business Name]</p>
             <p>[Client Business Address]</p>
@@ -80,12 +128,13 @@ body {
         </div>          
           <div class="right-section">               
             <div class="tax-invoice">
-              <p>Tax Invoice# 1547</p>
-            </div>   
+              <p>Tax Invoice # 1547</p>
+            </div>  
             <div class="header-date">
               <p>Invoice Date: Oct/07/2022</p>
               <p>Due Date: Oct/22/2022</p>
             </div>
+            <br>
             <div class="bill-section">
               <div class="bill-text">
                 <p>[Your Company Name]</p>
@@ -95,37 +144,41 @@ body {
           </div>          
         </div>
       </h1>
-        <table style="width: 100%"> 
-          <tr>
-            <th>DESCRIPTION</th>
-            <th>QTY</th>
-            <th>UNIT PRICE</th>
-            <th>SUBTOTAL</th>
-            <th>VAT</th>            
-          </tr>         
-          <tr>
-            <td>Products</td>
-            <td>3</td>
-            <td>1,2333.00</td>
-            <td>3,699.00</td>
-            <td>184.95(5%)</td>
-          </tr>
-          <tr>
-            <td>services</td>
-            <td>1</td>
-            <td>2,027.00</td>
-            <td>2,027.00</td>
-            <td>101.35(5%)</td>
-          </tr>
+        <table class="content-table" style="width: 100%">
+          <thead>
+            <tr>
+              <th>DESCRIPTION</th>
+              <th>QTY</th>
+              <th>UNIT PRICE</th>
+              <th>SUBTOTAL</th>
+              <th>VAT</th>            
+            </tr>
+          </thead>
+          <tbody>         
+            <tr>
+              <td>Products</td>
+              <td>3</td>
+              <td>1,2333.00</td>
+              <td>3,699.00</td>
+              <td>184.95(5%)</td>
+            </tr>
+            <tr>
+              <td>Services</td>
+              <td>1</td>
+              <td>2,027.00</td>
+              <td>2,027.00</td>
+              <td>101.35(5%)</td>
+            </tr>
+          </tbody> 
         </table>
         <h2 class="footer-container">
           <div class="footer-class">
             <div class="footer">
               <p>SIX THOUSAND TWELVE AED AND 30 FILS</p>
               <div class="footer-section">
-                <p>SUBTOTAL</p>
-                <p>VAT</p>
-                <p>Total</p>
+                <p>SUBTOTAL:</p>
+                <p>VAT:</p>
+                <p>Total:</p>
               </div>
               <div class="footer-text">
                 <p>AED 5,726.00</p>
